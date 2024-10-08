@@ -49,7 +49,7 @@
           data-aos-delay="50"
           data-aos-duration="2000"
         >
-          Kepada Bapak/Ibu/Saudara/i,
+          Kepada <span>Bapak/Ibu/Saudara/i, </span>
         </h4>
         <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="2000">
           Undangan Walimatul 'Urs
@@ -158,7 +158,7 @@
             data-aos-delay="1000"
             data-aos-duration="1000"
           >
-            Sabtu, 23 November 2024 <br />di Surakarta, Jawa Tengah.
+            Sabtu, 23 November 2024
           </h3>
         </div>
 
@@ -231,7 +231,7 @@
               Informasi Acara
             </h2>
             <div class="row justify-content-center mt-5">
-              <div class="col-md-5 col-10">
+              <div class="col-10">
                 <div
                   class="card text-center text-bg-light mb-4"
                   data-aos="flip-left"
@@ -256,7 +256,7 @@
                 </div>
               </div>
               <div
-                class="col-md-5 col-10"
+                class="col-10"
                 data-aos="flip-right"
                 data-aos-delay="50"
                 data-aos-duration="2000"
@@ -280,14 +280,23 @@
                 </div>
               </div>
             </div>
-            <p
-              class="lokasi m-4"
+
+            <h3
+              class="mt-5"
               data-aos="zoom-out-up"
               data-aos-delay="50"
               data-aos-duration="2000"
             >
-              Lokasi: Masjid Raya Fatimah <br />Jl. Dr. Radjiman No. 193
-              Jayengan, Kecamatan Serengan, Kota Surakarta
+              Lokasi: Masjid Raya Fatimah
+            </h3>
+            <p
+              class="lokasi"
+              data-aos="zoom-out-up"
+              data-aos-delay="50"
+              data-aos-duration="2000"
+            >
+              Jl. Dr. Radjiman No. 193 Jayengan, Kecamatan Serengan, Kota
+              Surakarta
             </p>
 
             <a
@@ -351,13 +360,7 @@
           <div class="col-12">
             <div class="m-3">
               <label for="nama" class="form-label">Nama</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nama"
-                name="nama"
-                value="Nama Lengkap"
-              />
+              <input type="text" class="form-control" id="nama" name="nama" />
             </div>
           </div>
           <div class="col-12">
@@ -452,7 +455,7 @@
 
     <div id="audio">
       <audio id="song" autoplay loop>
-        <source src="audio/jedagjedug.mp3" type="audio/mp3" />
+        <source src="audio/nasyid.mp3" type="audio/mp3" />
       </audio>
 
       <div class="audio-icon-wrapper" style="display: none">
@@ -489,6 +492,9 @@
     <script>
       const rootElement = document.querySelector(":root");
       const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+      let isPlaying = false;
 
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -509,13 +515,28 @@
       }
 
       function playAudio() {
-        const song = document.querySelector("#song");
-        // song.volume = 0.5;
+        song.volume = 0.5;
         audioIconWrapper.style.display = "flex";
         song.play();
+        let isPlaying = true;
       }
 
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.remove("bi-pause-circle");
+          audioIcon.classList.add("bi-disc");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
       // if (!localStorage.getItem("opened")) {
+      // disableScroll();
       // }
       disableScroll();
     </script>
@@ -552,8 +573,8 @@
           currentIndex = (currentIndex + 1) % sections.length; // Update ke section berikutnya, kembali ke awal jika di akhir
         }
 
-        // scrollToNextSection(); // Pindah ke section pertama
-        // setInterval(scrollToNextSection, 10000); // Pindah setiap 10 detik (10.000 ms)
+        scrollToNextSection(); // Pindah ke section pertama
+        setInterval(scrollToNextSection, 30000); // Pindah setiap 10 detik (10.000 ms)
       });
     </script>
 
@@ -564,6 +585,18 @@
         duration: 1000, // Durasi animasi
         once: false, // Animasi akan muncul setiap kali elemen muncul di viewport
       });
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const pronoun = urlParams.get("p") || "";
+      const nama = urlParams.get("n") || "Bapak/Ibu/Saudara/i";
+      // console.log(nama);
+
+      const namaContainer = document.querySelector(".hero h4 span");
+      namaContainer.innerText = `${pronoun} ${nama},`;
+
+      document.querySelector("#nama").value = nama;
     </script>
   </body>
 </html>
