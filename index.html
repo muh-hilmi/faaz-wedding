@@ -42,7 +42,7 @@
   <body>
     <section
       id="hero"
-      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center"
+      class="hero w-100 h-100 p-2 mx-auto text-center d-flex justify-content-center align-items-center"
     >
       <main>
         <h4
@@ -145,11 +145,18 @@
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              Begitu indah ketetapan Allah Ar-Rahman pada kami. Kami yang akan
-              terhimpun dalam sebuah ikatan <em>mitsaqan gholidzo</em>, kami
-              yang saling membutuhkan dalam ibadah dan taat kepada-Nya, dan kami
-              yang senantiasa meminta rahmat serta ridho Allah ﷻ , memohon doa
-              restu dari Bapak/Ibu/Saudara/i pada majelis pernikahan kami pada:
+              Puji syukur kami haturkan kepada Allah ﷻ yang telah melimpahkan
+              rahmat dan hidayahNya kepada kita semua. Sholawat serta salam tak
+              lupa kita sanjungkan kepada Nabi Muhammad ﷺ .
+            </p>
+            <p
+              class="mb-3"
+              data-aos="zoom-in-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              Dengan mengharap ridho Allah ﷻ, kami mengharapkan kehadiran
+              Bapak/Ibu/Saudara/i pada acara pernikahan putra putri kami:
             </p>
           </div>
           <h3
@@ -209,10 +216,10 @@
                   class="img-responsive rounded-circle profile-img"
                 />
               </div>
-              <div class="col-8">
+              <div class="col-8 text-start">
                 <h3>Fathan Qoriban, S.E, M.E</h3>
                 <p>
-                  <em>Putra ketiga Bp. Edi Casnaedi & Ibu Ermawati</em>
+                  <em>Putra keempat Bp. Edi Casnaedi & Ibu Ermawati</em>
                 </p>
               </div>
             </div>
@@ -227,7 +234,7 @@
     >
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-10 text-center">
+          <div class="text-center">
             <h2 data-aos="fade-up" data-aos-delay="50" data-aos-duration="2000">
               Informasi Acara
             </h2>
@@ -246,7 +253,7 @@
                         <i class="bi bi-clock-fill d-block"></i>
                         <span> Pukul 07.00 WIB </span>
                       </div>
-                      <div class="col-md-6">
+                      <div>
                         <i class="bi bi-calendar2-heart d-block"></i>
                         <span>
                           Sabtu, 23 November 2024 | 20 Jumadil Awal 1446 H
@@ -310,27 +317,6 @@
             >
               Lihat Alamat</a
             >
-            <div
-              class="mt-4 nb"
-              data-aos="flip-up"
-              data-aos-delay="50"
-              data-aos-duration="2000"
-            >
-              <p>
-                Tanpa mengurangi rasa hormat; <br /><br />🔸 Tamu laki-laki dan
-                perempuan terpisah <br />🔸 Tamu laki-laki hanya bisa berfoto
-                dengan mempelai laki-laki,<br />
-                tamu perempuan hanya bisa berfoto dengan mempelai perempuan
-                <br />🔸 Memakai pakaian sopan dan menutup aurat <br />🔸
-                Mendoakan kedua mempelai Memperhatikan waktu sholat <br />
-                🔸 Mohon maaf, <u>kami tidak menerima tamu di rumah </u>
-              </p>
-              <p class="mt-3">
-                Semoga Allah menjadikan kehadiran Bapak/Ibu/Saudara/i dalam
-                walimah ini menjadi bagian dari amal shalih. Kami ucapkan
-                <em>Jazakumullah Ahsanal Jaza.</em>
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -364,18 +350,28 @@
           data-aos-duration="2000"
         >
           <div class="col-12">
-            <div class="m-3">
-              <label for="nama" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="nama" name="nama" />
+            <div class="m-3 d-flex align-items-center">
+              <label for="nama" class="form-label me-2" style="width: 80px"
+                >Nama</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                name="nama"
+                required
+              />
             </div>
           </div>
           <div class="col-12">
-            <div class="m-3">
-              <label for="jumlah" class="form-label">Jumlah</label>
+            <div class="m-3 d-flex align-items-center">
+              <label for="jumlah" class="form-label me-2" style="width: 80px"
+                >Jumlah</label
+              >
               <input
                 type="number"
                 class="form-control"
-                id="nama"
+                id="jumlah"
                 name="jumlah"
                 min="0"
                 max="2"
@@ -384,8 +380,10 @@
             </div>
           </div>
           <div class="col-12">
-            <div class="m-3">
-              <label for="status" class="form-label">Konfirmasi</label>
+            <div class="m-3 d-flex">
+              <label for="status" class="form-label me-2" style="width: 80px"
+                >Konfirmasi</label
+              >
               <select name="status" id="status" class="form-select">
                 <option selected>Pilih salah satu</option>
                 <option value="hadir">Hadir</option>
@@ -394,60 +392,30 @@
             </div>
           </div>
           <div class="col-12">
-            <button class="btn btn-lg p-1" style="margin-top: 20px">
+            <button class="btn btn-lg py-3 px-5 mt-3" style="margin-top: 20px">
               Kirim
             </button>
           </div>
         </form>
-        <div>
-          <h2
-            class="mt-5"
-            data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="2000"
-          >
-            Amplop Digital
-          </h2>
-          <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="2000">
-            Doa restu Anda menrupakan karunia yang sangat berarti bagi kami.
-            <br />Dan jika memberi adalah ungkapan tanda kasih Anda dapat
-            memberi kado secara <em>cashless</em>
+
+        <div
+          class="mt-4 nb"
+          data-aos="flip-up"
+          data-aos-delay="50"
+          data-aos-duration="2000"
+        >
+          <p class="mb-0">Tanpa mengurangi rasa hormat;</p>
+          <p class="p-3 text-start">
+            🔸Tamu laki-laki dan perempuan terpisah<br />🔸Tamu pria berfoto
+            dengan mempelai pria, tamu wanita dengan mempelai wanita.
+            <br />🔸Memakai pakaian sopan dan menutup aurat <br />🔸Mendoakan
+            kedua mempelai<br />🔸Memperhatikan waktu sholat
           </p>
-        </div>
-        <div class="row justify-content-center text-center">
-          <div class="col-md-6">
-            <ul class="list-group">
-              <li
-                class="list-group-item"
-                data-aos="zoom-in-down"
-                data-aos-delay="50"
-                data-aos-duration="2000"
-              >
-                <div class="fw-bold">Bank Syariah Indonesia (BSI)</div>
-                7197443329 - Zaimatu Nabilah
-              </li>
-              <li
-                class="list-group-item mt-3"
-                data-aos="zoom-in-down"
-                data-aos-delay="50"
-                data-aos-duration="2000"
-              >
-                <div class="fw-bold">Bank Central Asia (BCA)</div>
-                4452061736 - Fathan Qoriban
-              </li>
-            </ul>
-          </div>
-          <p
-            class="mt-5"
-            data-aos="zoom-out-down"
-            data-aos-delay="50"
-            data-aos-duration="2000"
-          >
-            “Semoga Allah memberkahimu dan memberkahi pernikahanmu, serta semoga
-            Allah mempersatukan kalian berdua dalam kebaikan. Berkah Allah
-            (semoga tercurahkan) bagi masing-masing kalian berdua atas
-            pasangannya, dan (semoga) Allah mengumpulkan kalian berdua dalam
-            kebaikan”. <br />[HR. Bukhari, Muslim, Tirmidzi].
+          <p class="mt-3">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+            Bapak/Ibu/Saudara/i dapat berkenan hadir dan memberikan doa restu
+            pada acara pernikahan putra-putri kami. <br /><br />
+            <em>Jazakumullah Ahsanal Jaza.</em>
           </p>
         </div>
       </div>
@@ -462,7 +430,9 @@
             >
             <small class="block">
               <br />Made with 🤍
-              <a href="https://www.instagram.com/hilmi.izzulhaq/"
+              <a
+                href="https://www.instagram.com/hilmi.izzulhaq/"
+                class="text-decoration-underline"
                 >@hilmi.izzulhaq</a
               >
             </small>
@@ -577,7 +547,7 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Tentukan urutan section yang diinginkan
         const sectionOrder = ["hero", "home", "info", "rsvp"];
@@ -594,7 +564,7 @@
         scrollToNextSection(); // Pindah ke section pertama
         setInterval(scrollToNextSection, 30000); // Pindah setiap 10 detik (10.000 ms)
       });
-    </script>
+    </script> -->
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -609,7 +579,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const pronoun = urlParams.get("p") || "";
       const nama = urlParams.get("n") || "Bapak/Ibu/Saudara/i";
-      // console.log(nama);
+      console.log(nama);
 
       const namaContainer = document.querySelector(".hero h4 span");
       namaContainer.innerText = `${pronoun} ${nama},`;

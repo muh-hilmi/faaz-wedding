@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Work Sans", sans-serif;
   /* min-height: 4000px; */
   overflow-x: hidden;
@@ -30,7 +30,7 @@ body {
 
 .arabic-text {
   font-family: "Rubik", sans-serif;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
 }
 
 .hero::before {
@@ -66,31 +66,31 @@ body {
 
 .hero h1 {
   font-family: "Stalemate", cursive;
-  font-size: 6rem;
+  font-size: 7rem;
 }
 
 .hero h4 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .hero h2 {
   font-size: 3rem;
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .hero a,
 .info a,
-.rsvp a {
+.rsvp button {
+  font-size: 1.6rem;
   color: var(--bg2);
   background-color: var(--putih);
   box-shadow: var(--shadow);
 }
 
 .hero a:hover,
-.info a:hover,
-.rsvp a:hover {
+.info a:hover {
   background-color: var(--bg2);
   color: var(--putih);
 }
@@ -154,13 +154,13 @@ body {
 .gift h2 {
   color: var(--abu);
   font-family: "Stalemate", cursive;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
 }
 .home h2 {
   /* color: var(--abu); */
   font-family: "Stalemate", cursive;
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
 }
 
@@ -222,13 +222,12 @@ body {
   color: var(--abu);
 }
 
-.info .nb {
-  font-size: 1rem;
-  font-weight: 400;
+.info h3 {
+  font-size: 2.4rem;
 }
 
 .info .lokasi {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .info .card {
@@ -243,7 +242,7 @@ body {
 }
 
 .info .card-body {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .rsvp {
@@ -252,10 +251,27 @@ body {
   background-color: var(--bg2);
 }
 
-.rsvp p {
-  font-size: 1.2rem;
-  font-weight: 300;
+.rsvp p,
+.rsvp label {
+  font-size: 1.6rem;
+  font-weight: 400;
   color: var(--abu);
+}
+
+.rsvp input,
+.rsvp select,
+.rsvp select:focus-within,
+.rsvp input:focus {
+  color: var(--abu);
+  background-color: var(--bg2);
+  border: none;
+  border-bottom: 1px solid var(--bg);
+  font-size: 1.6rem;
+}
+
+.rsvp .nb {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 footer {
